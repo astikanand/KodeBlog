@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KodeBlog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="kodeblogapp.js"></script>
+    <script src="modules/root/router.js"></script>
+    <script src="modules/root/controller.js"></script>
+
+    <script src="modules/user/router.js"></script>
+    <script src="modules/user/controller.js"></script>
+</head>
+
+<body ng-app="kodeblogApp">
+    <div class="container" ng-controller="rootController">
+        <p>Hello from index</p>
+        <a ui-sref="hello" ui-sref-active="active">Hello</a>
+        <a ui-sref="about" ui-sref-active="active">About</a>
+
+        <a ui-sref="login" ui-sref-active="active">Login</a>
+        <a ui-sref="register" ui-sref-active="active">Register</a>
+
+        <ui-view></ui-view>
+    </div>
+</body>
+</html>
