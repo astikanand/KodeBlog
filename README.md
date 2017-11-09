@@ -1,0 +1,1 @@
+A blog application developed using MEAN(MongoDB, ExpressJS, AngularJS, NodeJS) stack.
