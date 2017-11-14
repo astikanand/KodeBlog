@@ -1,0 +1,33 @@
+<div class="ui form container">
+  <h1 class="ui center aligned header">Log in</h1>
+  <button class="ui facebook button"><i class="facebook icon"></i>Log in with Facebook</button>
+  <button class="ui google plus button right floated"><i class="google plus icon"></i>Log in with Google</button>
+  <div class="ui horizontal divider">Or</div>
+  <form class="ui form">
+    <div class="field">
+      <label>Username or Email</label>
+      <div class="ui left icon input">
+          <input type="text" name="username" placeholder="Username or Email" ng-model="username">
+          <i class="user icon"></i>
+      </div>
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <div class="ui left icon input">
+          <input type="password" name="password" placeholder="Password" ng-model="password">
+          <i class="lock icon"></i>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui checkbox">
+        <input type="checkbox" tabindex="0" class="hidden">
+        <label>Remeber Me</label>
+      </div>
+      <a href="#" class="float-right">Forgot Password?</a>
+    </div>
+    <div class="align-center">
+        <button class="ui yellow button" type="submit" ng-click="login()">Log in <i class="sign in icon"></i></button>
+    </div>
+    <div class="align-center margin-10">Don't have an account? <a ui-sref="register">Sign up</a></div>
+  </form>
+</div>

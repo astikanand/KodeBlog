@@ -1,0 +1,21 @@
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">{{modalTitle}}</div>
+  <!-- <div class="image content">
+    <div class="image">
+      An image can appear on left or an icon
+    </div>
+    <div class="description">
+      {{modalBody}}
+    </div>
+  </div> -->
+  <div class="content">
+    {{modalBody}}
+  </div>
+  <div class="actions" ng-if="modalLink === 'home'">
+    <div ui-sref="home" class="ui button positive">OK</div>
+  </div>
+  <div class="actions" ng-if="modalLink === 'register'">
+    <div ui-sref="login" class="ui button positive">Login</div>
+  </div>
+</div>

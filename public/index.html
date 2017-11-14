@@ -3,30 +3,38 @@
 <head>
     <meta charset="utf-8" />
     <title>KodeBlog</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="kodeblogapp.js"></script>
-    <script src="modules/root/router.js"></script>
-    <script src="modules/root/controller.js"></script>
-
-    <script src="modules/user/router.js"></script>
-    <script src="modules/user/controller.js"></script>
+    <link rel="stylesheet" href="assets/stylesheets/custom.css">
 </head>
 
-<body ng-app="kodeblogApp">
-    <div class="container" ng-controller="rootController">
-        <p>Hello from index</p>
-        <a ui-sref="hello" ui-sref-active="active">Hello</a>
-        <a ui-sref="about" ui-sref-active="active">About</a>
-
-        <a ui-sref="login" ui-sref-active="active">Login</a>
-        <a ui-sref="register" ui-sref-active="active">Register</a>
-
+<body ng-app="app">
+   <main-navbar></main-navbar>
+    <div class="ui container main-container" ng-controller="rootController">
         <ui-view></ui-view>
     </div>
+    <semantic-modal></semantic-modal>
+    <main-footer></main-footer>
+
+   <script src="app.js"></script>
+   <script src="modules/root/router_root.js"></script>
+   <script src="modules/root/controller_root.js"></script>
+
+   <script src="modules/root/directive_nav.js"></script>
+   <script src="modules/root/directive_footer.js"></script>
+   <script src="modules/root/controller_nav.js"></script>
+
+   <script src="modules/root/factory_auth.js"></script>
+
+   <script src="modules/user/router_user.js"></script>
+   <script src="modules/user/controller_user.js"></script>
+   <script src="modules/user/service_user_helper.js"></script>
+
+   <script src="assets/javascripts/custom.js"></script>
+
+   <script src="modules/semantic_modal/directive_modal.js"></script>
 </body>
 </html>

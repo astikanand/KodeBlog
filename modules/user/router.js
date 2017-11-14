@@ -21,7 +21,10 @@ router.post('/register', user.register);
 router.put('/edit', user.edit);
 // User Delete
 router.post('/delete', checker.tokenChecker, user.delete);
+// Check Username already present whilst registering
+router.get('/register/:username', user.checkUser);
 
-
+// Check email already registered whilst registering
+router.get('/register/email/:email', user.checkEmail);
 
 module.exports = router

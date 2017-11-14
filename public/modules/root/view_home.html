@@ -1,0 +1,30 @@
+<div class="ui special link cards">
+  <div class="card">
+    <div class="blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <a class="ui inverted button" href="/blogs/<%= blog._id %>"> View Article </a>
+          </div>
+        </div>
+      </div>
+      <img src="https://richonrails.com/images/articles/rails-on-ubuntu-16-04-x4.png?1483684843">
+    </div>
+    <div class="content">
+      <div class="header"><a href="/blogs/<%= blog._id %>">New Blog</a></div>
+      <div class="meta"><small><i class="clock icon"></i>Published 2 hours ago</small></div>
+      <div class="description">This is new blog</div>
+    </div>
+    <div class="extra content">
+      <span><i class="user icon"></i> Astik Anand</span>
+      <span style="margin-left: 40px"><i class="heart icon"></i> 1048</span>
+      <span class="right floated"><i class="comments icon"></i> 38</span>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('.special.cards .image').dimmer({
+    on: 'hover'
+  });
+</script>

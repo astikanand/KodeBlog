@@ -1,0 +1,32 @@
+<div class="ui special link cards">
+  <div class="card">
+    <div class="blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <a class="ui inverted button" href="/blogs/<%= blog._id %>"> View Profile </a>
+          </div>
+        </div>
+      </div>
+      <img src="https://i.stack.imgur.com/JQCl8.jpg?s=328&g=1">
+    </div>
+    <div class="content">
+      <div class="header"><a href="/blogs/<%= blog._id %>">Astik Anand</a></div>
+      <div class="meta"><small><i class="clock icon"></i>Joined 2 hours ago</small></div>
+      <div class="description">
+        A dedicated, organized and methodical individual with excellent technical and interpersonal skills. A passionate founder, excellent leader, team worker, flexible and also have the ability to work individually with a great efficiency and accuracy. Skilled in problem identification and implementation of effective solutions. Always thrive on new challenges and work on it with an ultimate dedication to complete it.
+      </div>
+    </div>
+    <div class="extra content">
+      <span><i class="user icon"></i> Astik Anand</span>
+      <span style="margin-left: 40px"><i class="heart icon"></i> 1048</span>
+      <span class="right floated"><i class="comments icon"></i> 38</span>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('.special.cards .image').dimmer({
+    on: 'hover'
+  });
+</script>

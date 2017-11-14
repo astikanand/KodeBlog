@@ -1,0 +1,89 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark" ng-controller="navController">
+    <div class="container">
+        <a class="navbar-brand" ui-sref="home">KodeBlog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login/Register
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" ui-sref="login">Login</a>
+                        <a class="dropdown-item" ui-sref="register">Register</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    View Profile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" ui-sref="profile">View Profile</a>
+                        <a class="dropdown-item" ui-sref="edit">Edit Profile</a>
+                        <a class="dropdown-item" >Delete Profile</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+
+<div class="ui fixed pointing inverted menu" ng-controller="navController">
+    <div class="ui container">
+        <a class="header item site-title"  ui-sref="home"> KodeBlog </a>
+        <a href="#" class="item active">Home</a>
+        <div class="ui simple dropdown item"> Dropdown <i class="dropdown icon"></i>
+	        <div class="menu">
+	          <a class="item" href="#">Link Item</a>
+	          <a class="item" href="#">Link Item</a>
+	          <div class="divider"></div>
+	          <div class="header">Header Item</div>
+	          <div class="item">
+	            <i class="dropdown icon"></i>
+	            Sub Menu
+	            <div class="menu">
+	              <a class="item" href="#">Link Item</a>
+	              <a class="item" href="#">Link Item</a>
+	            </div>
+	          </div>
+	          <a class="item" href="#">Link Item</a>
+	        </div>
+        </div>
+
+        <div class="right menu">
+		    <div class="item">
+		        <div class="ui transparent inverted icon input">
+			        <i class="search icon"></i>
+			        <input type="text" placeholder="Search">
+		        </div>
+		    </div>
+            <a class="item" ui-sref="login" ng-if="!isLoggedin()">Login</a>
+		    <a class="item" ui-sref="register" ng-if="!isLoggedin()">Signup</a>
+			<div class="ui simple dropdown item" ng-if="isLoggedin()"> View Profile <i class="dropdown icon"></i>
+		        <div class="menu">
+	                <a class="item" ui-sref="profile">View Profile</a>
+	                <a class="item" ui-sref="edit">Edit Profile</a>
+	                <a class="item" >Delete Profile</a>
+		        </div>
+	        </div>
+	    </div>
+    </div>
+</div>
+
+<div class="splash" >
+
+	<h1 class="main-heading">Articles</h1>
+
+</div>

@@ -1,0 +1,83 @@
+body{
+    background-color: #e7e7e7;
+}
+
+.ui.menu {
+    font-size: 1.1rem;
+    min-height: 3.55714286em;
+}
+
+.splash {
+    height: 25rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    background: #13a5a6 url(../images/back.png) 0 0 repeat;
+    overflow: hidden;
+}
+
+.main-heading{
+	font-size:50px;
+	text-align:center;
+	margin-top:150px !important;
+	font-weight:bold;
+	color:#fff;
+}
+
+.main-container{
+	min-height: 700px;
+	margin-top: -70px;
+	padding:20px;
+  background-color: #fff;
+}
+
+.site-title{
+	color: #13a5a6 !important;
+}
+
+.ui.cards > .card {
+    border-radius: 0;
+    width: 320px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.ui.cards > .card:hover {
+    border-radius: 0;
+}
+
+.ui.cards > .card > .image:not(.ui) > img, .ui.card > .image:not(.ui) > img {
+    border-radius: 0;
+}
+
+.article-button{
+	margin-left:25px !important;
+}
+
+.ui.form.container{
+    max-width:400px!important;
+}
+
+
+.ui.horizontal.divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ui.center.aligned.header{
+  margin-bottom: 40px;
+}
+
+.float-right{
+  float: right;
+}
+
+.align-center{
+  text-align: center;
+}
+
+.margin-10{
+  margin-top: 10px;
+}
+
+.text-danger{
+    color: red;
+}

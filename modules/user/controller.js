@@ -28,6 +28,27 @@ module.exports.register = function (req, res) {
     });
 }
 
+module.exports.checkUser = function (req, res) {
+    User.findOne({'username': req.params.username}, function(err, user) {
+        if(err){
+            res.status(401).json(err);
+        }else{
+            res.status(201).json(user);
+        }
+    });
+}
+
+module.exports.checkEmail = function (req, res) {
+    User.findOne({'email': req.params.email}, function(err, user) {
+        if(err){
+            res.status(401).json(err);
+        }else{
+            res.status(201).json(user);
+        }
+    });
+}
+
+
 // User Login
 module.exports.login = function (req, res) {
 

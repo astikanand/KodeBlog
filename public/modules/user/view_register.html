@@ -1,0 +1,68 @@
+<div class="ui form container">
+    <h1 class="ui center aligned header">Sign up</h1>
+    <button class="ui facebook button"><i class="facebook icon"></i>Join with Facebook</button>
+    <button class="ui google plus button right floated"><i class="google plus icon"></i>Join with Google</button>
+    <div class="ui horizontal divider">Or</div>
+    <form class="ui form" name="registerForm">
+        <div class="field">
+            <label>Full Name</label>
+            <div class="ui left icon input">
+                <input type="text" id="name" placeholder="Full Name" name="name" ng-model="name" required>
+                <i class="user icon"></i>
+            </div>
+        </div>
+        <p class="text-danger" ng-show="registerForm.name.$invalid && !registerForm.name.$pristine">Full Name is required</p>
+
+        <div class="field">
+            <label>Username</label>
+            <div class="ui left icon input">
+                <input type="text" id="username" placeholder="Username" name="username" ng-model="username" required ng-blur="usernameChecker()">
+                <i class="user icon"></i>
+            </div>
+        </div>
+        <p class="text-danger" ng-show="registerForm.username.$invalid && !registerForm.username.$pristine">Username is required.</p>
+        <p class="text-danger" ng-if="isUsername">This username is already taken.</p>
+
+        <div class="field">
+            <label>Email</label>
+            <div class="ui left icon input">
+                <input type="email" id="email" placeholder="Email" name="email" ng-model="email" required ng-blur="useremailChecker()">
+                <i class="mail icon"></i>
+            </div>
+        </div>
+        <p class="text-danger" ng-show="registerForm.email.$dirty && registerForm.email.$invalid && registerForm.email.$error.required">Email is required.</p>
+        <p class="text-danger" ng-show="registerForm.email.$dirty && registerForm.email.$invalid && registerForm.email.$error.email">Email is invalid.</p>
+        <p class="text-danger" ng-if="isEmail">This email is already registered.</p>
+
+        <div class="field">
+            <label>Password</label>
+            <div class="ui left icon input">
+                <input type="password" id="password" placeholder="Password" name="password" ng-model="password" required ng-minlength="8" ng-change="passwordChecker()">
+                <i class="lock icon"></i>
+            </div>
+        </div>
+        <p class="text-danger" ng-show="registerForm.password.$invalid && !registerForm.password.$pristine">Password is required.</p>
+        <p class="text-danger" ng-if="registerForm.password.$error.minlength">Password must have atleast 8 characters.</p>
+
+        <div class="field">
+            <label>Password Again</label>
+            <div class="ui left icon input">
+                <input type="password" id="passwordagain" name="passwordagain" placeholder="Password Again" ng-model="passwordagain" ng-change="passwordChecker()">
+                <i class="lock icon"></i>
+            </div>
+        </div>
+        <p class="text-danger" ng-if="!match && !registerForm.password.$pristine">Passwords don't match.</p>
+
+        <div class="align-center">
+            <button class="ui teal button" type="submit" ng-click="register()">Start Now</i></button>
+        </div>
+        <div class="align-center margin-10">
+            Already have an account? <a ui-sref="login">Log in</a>
+        </div>
+    </form>
+</div>
+
+
+<script>
+    $('.ui.error').show();
+</script>
